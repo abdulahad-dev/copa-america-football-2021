@@ -125,9 +125,7 @@ main{
     margin: 70px 0;
 }
 .football-highlights-area{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    display: flex;
 }
 .hightlights-content h2{
     color: #0A0826;
@@ -241,5 +239,79 @@ footer p{
 }
 
 
+/* ----------------
+    Media Quereis 
+--------------------*/
+
+/* Mobile Device */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .banner-area,.players,.videos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+   
+    .football-highlights-area{
+        grid-template-columns: repeat(1, 1fr);
+        display: block;
+    }
+    .football-banner-content, .football-banner{
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    #highlights-bg{
+        margin: 0 0;
+    }
+    .hightlights-content, .highlights-image{
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .football-banner-content h2, .hightlights-content h2{
+        font-size: 40px;
+        line-height: 54px;
+    }
+    .football-banner img, .highlights-image img{
+        margin-top: 40px;
+        width: 100%;
+    }
+    .players{
+        padding: 0 15px;
+    }
+    .video-heading, .gallery-title{
+        font-size: 45px;
+        text-align: center;
+    }
+    .videos{
+        padding: 0 15px;
+        grid-row-gap: 30px;
+    }
+    .footer-logo img{
+        width: 80%;
+    }
+}
 
 
+
+/* Tablet Devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .banner-area,.players,.videos,.football-highlights-area{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 30px;
+        padding: 0 25px;
+    }
+    .highlights-image img{
+        width: 100%;
+    }
+    .video-heading, .gallery-title{
+        font-size: 45px;
+        text-align: center;
+    }
+    .photo-gallerys{
+        margin: 0 15px;
+    }
+}
